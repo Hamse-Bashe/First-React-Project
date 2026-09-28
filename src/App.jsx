@@ -1,11 +1,11 @@
-import UserCard from "./UserCard";
+import Blog from "./Blog";
 
 function App(){
 
   return(
     // jsx
     <>
-    <UserCard/>
+    <Blog/>
     </>
   )
 }

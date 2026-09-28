@@ -1,8 +1,8 @@
-function UserCard(){
+function UserCard({userName, email}){
     return(
         <div>
-            <h2>John Doe</h2>
-            <p>john.doe@example.com</p>
+            <h2>{userName}</h2>
+            <p>{email}</p>
         </div>
     )
 }

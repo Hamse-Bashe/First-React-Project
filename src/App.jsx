@@ -1,11 +1,21 @@
-import Blog from "./Blog";
+import UserCard from "./UserCard";
 
 function App(){
-
   return(
     // jsx
     <>
-    <Blog/>
+    <UserCard
+      userName = {"Hamse Bashe"}
+      email = {"hamsebashe@example.com"}
+    />
+    <UserCard
+      userName = {"Jama Muse"}
+      email = {"jamamuse26@example.com"}
+    />
+    <UserCard
+      userName = {"Duniyo Faisal"}
+      email = {"duniyofaisal@example.com"}
+    />
     </>
   )
 }

@@ -1,10 +1,10 @@
-import ShoppingCart from "./ShoppingCart";
+import PageTitle from "./PageTitle";
 
 function App(){
   return(
     // jsx
     <>
-    <ShoppingCart/>
+    <PageTitle/>
     </>
   )
 }

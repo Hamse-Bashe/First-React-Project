@@ -1,10 +1,10 @@
-import PageTitle from "./PageTitle";
+import MouseTracker from "./MouseTracker";
 
 function App(){
   return(
     // jsx
     <>
-    <PageTitle/>
+    <MouseTracker/>
     </>
   )
 }

@@ -1,10 +1,10 @@
-import MouseTracker from "./MouseTracker";
+import Countdown from "./CountdownTimer";
 
 function App(){
   return(
     // jsx
     <>
-    <MouseTracker/>
+    <Countdown/>
     </>
   )
 }

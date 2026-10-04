@@ -1,10 +1,10 @@
-import Countdown from "./CountdownTimer";
+import GitHubUserSearch from "./GitHubUserSearch";
 
 function App(){
   return(
     // jsx
     <>
-    <Countdown/>
+    <GitHubUserSearch/>
     </>
   )
 }

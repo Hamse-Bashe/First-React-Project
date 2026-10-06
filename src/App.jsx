@@ -1,8 +1,8 @@
-import Count from "./Count";
+import DoubleCounter from "./DoubleCounter";
 
 function App(){
   return(
-    <Count
+    <DoubleCounter
     />
   )
 }

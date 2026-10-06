@@ -1,9 +1,8 @@
-// import UserList from "./UserList";
-import UserLogin from "./UserLogin";
+import Count from "./Count";
 
 function App(){
   return(
-    <UserLogin
+    <Count
     />
   )
 }

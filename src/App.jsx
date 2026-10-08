@@ -1,8 +1,8 @@
-import DoubleCounter from "./DoubleCounter";
+import MultiStepRegistration from "./MultiStepRegistration";
 
 function App(){
   return(
-    <DoubleCounter
+    <MultiStepRegistration
     />
   )
 }

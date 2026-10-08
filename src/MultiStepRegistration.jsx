@@ -1,0 +1,141 @@
+import {useReducer} from 'react';
+
+const initialState = {
+  step: 1,
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+};
+
+const reducer = (state, action)=> {
+  switch (action.type) {
+    case 'UPDATE_FIELD':
+      return {
+        ...state,
+        [action.field]: action.value,
+      };
+    case 'NEXT_STEP':
+      return {
+        ...state,
+        step: state.step + 1,
+      };
+    case 'PREV_STEP':
+      return {
+        ...state,
+        step: state.step - 1,
+      };
+    case 'RESET_FORM':
+      return initialState;
+    default:
+      return state;
+  }
+}
+
+
+const MultiStepRegistration = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const handleChange = (e) => {
+    dispatch({
+      type: 'UPDATE_FIELD',
+      field: e.target.name,
+      value: e.target.value,
+    });
+  };
+
+  const nextStep = () => {
+    dispatch({ type: 'NEXT_STEP' });
+  }
+  const prevStep = () => {
+    dispatch({ type: 'PREV_STEP' });
+  }
+  const resetForm = () => {
+    dispatch({ type: 'RESET_FORM' });
+  }
+
+  const handleSubmit = () => {
+    alert('Form submitted successfully!');
+    resetForm();
+  };
+
+  return (
+    <div>
+      <h2>Multi Step Registration</h2>
+      {state.step === 1 && (
+        <div>
+          <h3>Step {state.step}: Profile</h3>
+          <label>
+            First Name:
+            <input
+              type="text"
+              name="firstName"
+              value={state.firstName}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            Last Name:
+            <input
+              type="text"
+              name="lastName"
+              value={state.lastName}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <button onClick={nextStep}>Next</button>
+        </div>
+      )}
+      {state.step === 2 && (
+        <div>
+          <h3>Step {state.step}: Contact</h3>
+          <label>
+            Email:
+            <input
+              type="email"
+              name="email"
+              value={state.email}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            Phone:
+            <input
+              type="tel"
+              name="phone"
+              value={state.phone}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <button onClick={prevStep}>Back</button>
+          <button onClick={nextStep}>Next</button>
+        </div>
+      )}
+      {state.step === 3 && (
+        <div>
+          <h3>Step {state.step}: Review</h3>
+          <p>
+            <strong>First Name:</strong> {state.firstName}
+          </p>
+          <p>
+            <strong>Last Name:</strong> {state.lastName}
+          </p>
+          <p>
+            <strong>Email:</strong> {state.email}
+          </p>
+          <p>
+            <strong>Phone:</strong> {state.phone}
+          </p>
+          <button onClick={prevStep}>Back</button>
+          <button onClick={handleSubmit}>Confirm</button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default MultiStepRegistration;

@@ -1,0 +1,52 @@
+.todoStyle {
+    /* border: 1px solid black; */
+    box-shadow: 1px 1px 10px #9a9898;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    font-family: inherit;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    
+}
+button {
+    font-family: inherit;
+    padding: 5px 10px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+
+
+.deleteButton {
+    color: red;
+    background-color: transparent;
+}
+
+li {
+    list-style: none;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.ticked {
+    text-decoration: line-through;
+    cursor: pointer;
+    color: #a1a1a1;
+}

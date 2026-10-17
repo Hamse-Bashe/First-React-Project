@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import TodoContext from './TodoContext';
-import styles from './todoApp.module.css'
 
 
 const TodoForm = () => {
@@ -22,15 +21,18 @@ const {dispatch} = useContext(TodoContext)
     }
 
   return (
-    <div className={styles.todoForm}>
-        <h2>Todo App</h2>
-        <input 
-            type="text"
-            value={text}
-            onChange={(e)=> setText(e.target.value)} 
-            placeholder="Enter a New Todo"
-        />
-        <button onClick={handleAdd}>Add</button>
+    <div className='text-center'>
+        <h2 className='font-bold text-2xl'>Todo App</h2>
+        <div className='space-x-4 mt-2'>
+            <input 
+                type="text"
+                value={text}
+                onChange={(e)=> setText(e.target.value)} 
+                placeholder="Enter a New Todo"
+                className='p-2 rounded border border-gray-400'
+            />
+            <button onClick={handleAdd} className='bg-indigo-600 py-2 px-4 text-white rounded' >Add</button>
+        </div>
     </div>
   )
 }

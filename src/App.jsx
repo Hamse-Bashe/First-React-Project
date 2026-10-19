@@ -1,11 +1,10 @@
-import ContactApp from "./ContactApp";
-import TodoApp from "./TodoApp";
+import StudentDashboard from "./StudentDashboard";
 
 
 function App() {
   
   return (
-    <TodoApp/>
+    <StudentDashboard/>
   );
 }
 

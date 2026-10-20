@@ -1,10 +1,11 @@
-import StudentDashboard from "./StudentDashboard";
+import MultipleInputs from "./MultipleInputs";
+
 
 
 function App() {
   
   return (
-    <StudentDashboard/>
+    <MultipleInputs/>
   );
 }
 

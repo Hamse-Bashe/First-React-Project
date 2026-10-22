@@ -1,11 +1,12 @@
-import MultipleInputs from "./MultipleInputs";
+import DeveloperForm from "./DeveloperForm";
+
 
 
 
 function App() {
   
   return (
-    <MultipleInputs/>
+    <DeveloperForm/>
   );
 }
 

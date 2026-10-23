@@ -1,12 +1,9 @@
-import DeveloperForm from "./DeveloperForm";
-
-
-
+import StudentRegistration from "./StudentRegistration";
 
 function App() {
   
   return (
-    <DeveloperForm/>
+    <StudentRegistration/>
   );
 }
 
